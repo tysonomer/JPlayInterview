@@ -10,13 +10,28 @@
 </head>
 
 <body>
-    <video autoplay>
-        <source src="video.mp4" type="video/mp4">
-      </video>
-    <video controls>
-        <source src="tutorial.ogg" type="video /ogg">
-        <source src="tutorial.mp4" type="video /mpeg">
-        Your browser does not support the video element. Kindly update it to latest version.
-      </video >
+    <div class="banner">
+        <div class="content">
+            <img src="JPlayInterview.png" alt="JPlayInterview">
+            <!-- <h2>JPlay Interview</h2> -->
+            <a href="#" onclick="toggle();">Play</a>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="" controls="true">
+     </video>
+        <img src="close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var trailer = document.querySelector(".trailer")
+            trailer.classList.toggle("active")
+            var video = document.querySelector("video")
+            trailer.classList.toggle("active");
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>
 </body>
+
 </html>
